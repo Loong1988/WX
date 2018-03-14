@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@import url("reset.css");
+
+html,body{
+    font-family: Arial;
+    background-color: #fff;
+    overflow: visible;
+    line-height: 1.4;
+    color: #110E15;
+    -webkit-text-size-adjust: 100%!important;
+}
+html {
+    overflow: hidden;
+}
+body.webkit_bug {
+    /*-webkit-transform: rotate(0.000005deg);*/
+}
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.map_holder {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.no_events {
+    pointer-events: none;
+}
+
+.viewport {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    /*display: none;*/
+    overflow:hidden;
+    transform-origin:left top;
+    -webkit-transform-origin:left top;
+    -ms-transform-origin: left top;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+}
+.elements{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.scene_wrap {overflow:visible; z-index: 0;}
+.scene {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: none;
+    transform-origin:left top;
+    -webkit-transform-origin:left top;
+    -ms-transform-origin:left top;
+    z-index: 0;
+}
+.scene .big_bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+}
+
+.scene_ui_wrap {overflow:visible; z-index: 1;}
+.scene_ui {
+    overflow: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.scene_ui .fullscreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+}
+
+.ui{
+    z-index: 999;
+    /*-webkit-transform: translate3d(0,0,0);*/
+    /*transform: translate3d(0,0,0)*/
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.pressed{
+    -webkit-transition: -webkit-transform 0.1s ease-out;
+    transition: -webkit-transform 0.1s ease-out;
+    -webkit-transform: scale3d(0.95,0.95,0.95);
+    transform: scale3d(0.95,0.95,0.95);
+}
